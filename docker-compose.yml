@@ -1,0 +1,16 @@
+version: '3.4'
+services:
+  app:
+    image: rklaczok/karaoke:0.0.2
+    container_name: karaoke
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+  db:
+    image: mysql:8.0.19
+    container_name: mysql_server
+    environment:
+      MYSQL_ROOT_PASSWORD: "Klacz02"
+    ports:
+      - 3306:3306/tcp

@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    password: Klacz02
+    url: jdbc:mysql://mysql_server:3306/karaokedb?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&useTimezone=true&serverTimezone=UTC
+    username: root
+  jpa:
+    database: MYSQL
