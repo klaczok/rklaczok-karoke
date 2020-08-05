@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   app:
-    image: rklaczok/karaoke:0.0.2
+    image: rklaczok/karaoke:0.0.3
     container_name: karaoke
     ports:
       - 8080:8080

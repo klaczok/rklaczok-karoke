@@ -1,5 +1,6 @@
 FROM openjdk:8-jdk-alpine
 EXPOSE 8080
+ARG JAR_FILE
 VOLUME /tmp
-COPY target/karaoke*.jar app.jar
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app.jar"]
+COPY ${JAR_FILE} karaoke.jar
+ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/karaoke.jar"]
